@@ -1,19 +1,11 @@
-# PROJECT TITLE
-_by Project Owner_
+# Meme-to-text
+Data-commando
 
 ## Project Developers
+Oliverjarvis - @saxogrammaticus
 
 ## Project Description
-[Git Repo](https://github.com/centre-for-humanities-computing/project-template.git)
-
-## Data Assessment ##
-| Source | risk | Storage | Comment|
-| --- |:---:|---|---|
-|||| |
-
-## Time Estimate ##
-
-## Deadline ##
+Ensemble method to detect and extract content and context from a meme
 
 ## License ##
 This software is [MIT licensed](./LICENSE.txt).
