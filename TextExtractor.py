@@ -26,9 +26,10 @@ def order_boxes(boxes):
     boxes[line_begin_idx:] = sorted(boxes[line_begin_idx:], key=lambda b: b[0])
     return boxes
 
-def get_contours(img):
+def get_contours(img, inverted=False):
     # Invert the image
-    img = cv2.bitwise_not(img)
+    if inverted:
+        img = cv2.bitwise_not(img)
     # Convert the image to gray scale 
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) 
 
@@ -55,6 +56,7 @@ def extractText(img):
     image = cv2.imread(img) 
     im2 = image.copy() 
     bounding_rectangles = get_contours(image)
+    bounding_rectangles += get_contours(image, inverted=True)
     ocr_text = ""
     for rect in bounding_rectangles:
         (x, y, w, h) = rect
